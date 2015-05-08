@@ -1,5 +1,5 @@
 Meteor.publish('deals', function(){
-	return Deals.find();
+	return Deals.find({}, options);
 });
 
 Meteor.publish('comments', function(){
