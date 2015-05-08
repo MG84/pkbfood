@@ -1,19 +1,57 @@
+// Fixture data
 if (Deals.find().count() === 0) {
-	Deals.insert({
-		title: 'Spaghetti al nero di seppia',
-		author: 'Felicia Sangermano',
-		url: 'http://potkettleblack.it/spaghetti-al-nero-di-seppia/'
+	var now = new Date().getTime();
+
+	// create two users
+	var aliceId = Meteor.users.insert({
+		profile: { name: 'Alice' }
 	});
+	var alice = Meteor.users.findOne(aliceId);
+
+	var bobId = Meteor.users.insert({
+		profile: {name: 'Bob'}
+	});
+	var bob = Meteor.users.findOne(bobId);
+
+	// create few deals one with comments
+
+	var spaghettiId = Deals.insert({
+		title: "Spaghetti al nero di seppia",
+		userId: alice._id,
+		author: alice.profile.name,
+		url: 'http://potkettleblack.it/spaghetti-al-nero-di-seppia/',
+		submitted: now - 7 *3600 * 1000
+	});
+
+	Comments.insert({
+		dealId: spaghettiId,
+		userId: bob._id,
+		author: bob.profile.name,
+		submitted: now - 5 * 3600 * 1000,
+		body: "Brava Alice, ottima ricetta! Mi piacerebbe proprio provarli, sei libera la prossima settimana?"
+	});
+
+	Comments.insert({
+		dealId: spaghettiId,
+		userId: alice._id,
+		author: alice.profile.name,
+		submitted: now - 3 * 3600 * 1000,
+		body: 'Grazie Tom! Va bene per la prossima settimana. A presto!'
+	})
 
 	Deals.insert({
 		title: 'Red velvet cake',
-		author: 'Felicia Sangermano',
-		url: 'http://potkettleblack.it/red-velvet-cake/'
+		userId: bob._id,
+		author: bob.profile.name,
+		url: 'http://potkettleblack.it/red-velvet-cake/',
+		submitted: now - 10 * 3600 * 1000
 	});
 
 	Deals.insert({
 		title: 'Crepes ripiene con carciofi al curry',
-		author: 'Felicia Sangermano',
-		url: 'http://potkettleblack.it/crepes-carciofi-curry/'
+		userId: alice._id,
+		author: alice.profile.name,
+		url: 'http://potkettleblack.it/crepes-carciofi-curry/',
+		submitted: now - 10 * 3600 * 1000
 	});
 }
