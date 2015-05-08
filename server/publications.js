@@ -1,4 +1,4 @@
-Meteor.publish('deals', function(){
+Meteor.publish('deals', function(options){
 	return Deals.find({}, options);
 });
 
