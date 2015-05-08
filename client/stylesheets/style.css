@@ -1,4 +1,4 @@
-.grid-block, .main, .deals, .comments li, .comment-form { 
+.grid-block, .main, .deal, .comments li, .comment-form { 
 	background: #fff;
 	border-radius: 3px;
 	padding: 10px;
@@ -13,6 +13,16 @@ body {
 	color: #666666;
 }
 
+#main {
+	position: relative;
+}
+
+.page {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
 .navbar { 
 	margin-bottom: 10px;
 }
@@ -25,63 +35,74 @@ body {
 	height: 300px 
 } 
 
-.deals {
+.deal {
+	/* For modern browsers */
+	/* For IE 6/7 (trigger hasLayout) */
 	*zoom: 1;
-	-webkit-transition: all 300ms 0ms; 
-	-webkit-transition-delay: ease-in; 
-	-moz-transition: all 300ms 0ms ease-in; 
-	-o-transition: all 300ms 0ms ease-in; 
-	transition: all 300ms 0ms ease-in; 
 	position: relative;
 	opacity: 1;
 }
 
-.deals:before, .deals:after {
+.deal:before, .deal:after {
 	content: "";
 	display: table; 
 }
 
-.deals:after { 
+.deal:after { 
 	clear: both 
 } 
 
-.deals.invisible { 
+.deal.invisible { 
 	opacity: 0 
 } 
 
-.deals .upvote {
+.deal.instant {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; 
+}
+
+.deal.animate{
+    -webkit-transition: all 300ms 0ms;
+    -moz-transition: all 300ms 0ms ease-in;
+    -o-transition: all 300ms 0ms ease-in;
+    transition: all 300ms 0ms ease-in; 
+}
+
+.deal .upvote {
 	display: block; 
 	margin: 7px 12px 0 0; 
 	float: left;
 }
 
-.deals .deals-content { 
+.deal .deal-content { 
 	float: left;
 } 
 
-.deals .deals-content h3 {
+.deal .deal-content h3 {
 	margin: 0; 
 	line-height: 1.4; 
 	font-size: 18px;
 }
 
-.deals .deals-content h3 a { 
+.deal .deal-content h3 a { 
 	display: inline-block; 
 	margin-right: 5px;
 }
 
-.deals .deals-content h3 span {
+.deal .deal-content h3 span {
 	font-weight: normal; 
 	font-size: 14px; 
 	display: inline-block; 
 	color: #aaaaaa;
 }
 
-.deals .deals-content p { 
+.deal .deal-content p { 
 	margin: 0; 
 } 
 
-.deals .discuss {
+.deal .discuss {
 	display: block; 
 	float: right; 
 	margin-top: 7px;

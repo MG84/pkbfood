@@ -7,3 +7,6 @@
 meteor-platform
 insecure
 twbs:bootstrap
+iron:router@1.0.0-rc.1
+ian:accounts-ui-bootstrap-3
+sacha:spin
