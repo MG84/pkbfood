@@ -8,7 +8,7 @@ Template.dealSubmit.events({
 			message: $(e.target).find('[name=message]').val()
 		}
 
-		Meteor.call('post', deal, function(error, id){
+		Meteor.call('deal', deal, function(error, id){
 			if (error) {
 				throwError(error.reason);
 				if (error.error === 302)
