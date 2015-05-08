@@ -5,3 +5,7 @@ Meteor.publish('deals', function(){
 Meteor.publish('comments', function(){
 	return Comments.find({dealId: dealId});
 });
+
+Meteor.publish('notifications', function() {
+	return Notifications.find();
+})
