@@ -9,9 +9,13 @@ Template.dealSubmit.events({
 		}
 
 		Meteor.call('post', deal, function(error, id){
-			if (error)
-				return alert(error.reason);
-			Router.go('dealPage', {_id: id});
+			if (error) {
+				throwError(error.reason);
+				if (error.error === 302)
+					Router.go('dealPage', {_id: error.details})
+			} else {
+				Router.go('dealPage', {_id: id});
+			}
 		});
 	}
 });
