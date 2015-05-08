@@ -57,4 +57,15 @@ if (Deals.find().count() === 0) {
 		submitted: now - 10 * 3600 * 1000,
 		commentsCount: 0,
 	});
+
+	for (var i = 0; i < 10; i++) {
+		Deals.insert({
+			title: 'Test Chef Deal #' + i,
+			author: (i%2==0) ? alice.profile.name : bob.profile.name,
+			userId: (i%2==0) ? alice._id : bob._id,
+			url: 'http://wwww.potkettleblack.it',
+			submitted: now - i * 3600 * 1000,
+			commentsCount: 0
+		});
+	}
 }
