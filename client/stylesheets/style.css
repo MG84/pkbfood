@@ -3,16 +3,20 @@
 	border-radius: 3px;
 	padding: 10px;
 	margin-bottom: 10px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); 
 }
 
 body {
-	background: #eee; color: #666666;
+	background: #eee; 
+	color: #666666;
 }
 
 .navbar { 
-	margin-bottom: 10px 
-	} 
+	margin-bottom: 10px;
+}
+
 .navbar .navbar-inner {
 	border-radius: 0px 0px 3px 3px; 
 }
