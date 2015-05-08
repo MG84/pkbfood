@@ -8,7 +8,10 @@ Template.dealSubmit.events({
 			message: $(e.target).find('[name=message]').val()
 		}
 
-		deal._id = Deals.insert(deal);
-		Router.go('dealPage', deal);
+		Meteor.call('post', deal, function(error, id){
+			if (error)
+				return alert(error.reason);
+			Router.go('dealPage', {_id: id});
+		});
 	}
 });
