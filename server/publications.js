@@ -2,7 +2,7 @@ Meteor.publish('deals', function(options){
 	return Deals.find({}, options);
 });
 
-Meteor.publish('comments', function(){
+Meteor.publish('comments', function(dealId){
 	return Comments.find({dealId: dealId});
 });
 
