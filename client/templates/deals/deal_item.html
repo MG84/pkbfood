@@ -2,6 +2,9 @@
 	<div class="deal">
 		<div class="deal-content">
 			<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+			<p>submitted by {{author}}
+			{{#if ownDeal}}<a href="{{pathFor 'dealEdit'}}">Edit</a>{{/if}}
+			</p>
 		</div>
 		<a href="{{pathFor 'dealPage'}}" class="discuss btn">Discuss</a>
 	</div>
