@@ -21,7 +21,9 @@ if (Deals.find().count() === 0) {
 		author: alice.profile.name,
 		url: 'http://potkettleblack.it/spaghetti-al-nero-di-seppia/',
 		submitted: now - 7 *3600 * 1000,
-		commentsCount: 2
+		commentsCount: 2,
+		upvoters: [], 
+		votes: 0
 	});
 
 	Comments.insert({
@@ -46,7 +48,9 @@ if (Deals.find().count() === 0) {
 		author: bob.profile.name,
 		url: 'http://potkettleblack.it/red-velvet-cake/',
 		submitted: now - 10 * 3600 * 1000,
-		commentsCount: 0
+		commentsCount: 0,
+		upvoters: [],
+		votes: 0
 	});
 
 	Deals.insert({
@@ -56,6 +60,8 @@ if (Deals.find().count() === 0) {
 		url: 'http://potkettleblack.it/crepes-carciofi-curry/',
 		submitted: now - 10 * 3600 * 1000,
 		commentsCount: 0,
+		upvoters: [],
+		votes: 0
 	});
 
 	for (var i = 0; i < 10; i++) {

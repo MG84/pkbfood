@@ -1,7 +1,7 @@
 <!-- Contains errors and error templates -->
 
 <template name="errors">
-	<div class="errors row-fluid">
+	<div class="errors">
 		{{#each errors}}
 			{{> error}}
 		{{/each}}
@@ -9,7 +9,8 @@
 </template>
 
 <template name="error">
-	<div class="alert alert-error">
-		<button type="button" class="close" data-dismiss="alert">$times;</button>
+	<div class="alert alert-danger" role="alert">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		{{message}}
 	</div>
 </template>

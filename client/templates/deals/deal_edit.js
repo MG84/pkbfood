@@ -11,7 +11,7 @@ Template.dealEdit.events({
 
 		Deals.update(currentDealId, {$set: dealProperties}, function(error) {
 			if (error) {
-				alert(error.reason);
+				throwError(error.reason);
 			} else {
 				Router.go('dealPage', {_id: currentDealId});
 			}

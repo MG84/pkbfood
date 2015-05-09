@@ -1,8 +1,11 @@
 <template name="dealItem">
 	<div class="deal">
+		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
 		<div class="deal-content">
 			<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-			<p>submitted by {{author}},
+			<p>
+				{{pluralize votes "Vote"}},
+				submitted by {{author}},
 			<a href="{{pathFor 'dealPage'}}">{{pluralize commentsCount "comment"}}</a>
 			{{#if ownDeal}}<a href="{{pathFor 'dealEdit'}}">Edit</a>{{/if}}
 			</p>
