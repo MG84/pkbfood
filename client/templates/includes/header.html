@@ -1,34 +1,36 @@
 <template name="header">
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="{{pathFor 'home'}}">PKBfood</a>
-		</div>
-		<div class="collapse navbar-collapse" id="navigation">
-			<ul class="nav navbar-nav">
-				<li class="{{activeRouteClass 'home' 'newDeals'}}">
-					<a href="{{pathFor 'newDeals'}}">New</a>
-				</li>
-				<li class="{{activeRouteClass 'bestDeals'}}">
-					<a href="{{pathFor 'bestDeals'}}">Best</a>
-				</li>
-				{{#if currentUser}}
-					<li class="{{activeRouteClass 'dealSubmit'}}">
-						<a href="{{pathFor 'dealSubmit'}}">Submit New Deal</a>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{pathFor 'home'}}"><img id="logo" src="PKBlogo.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li class="{{activeRouteClass 'newDeals'}}">
+						<a href="{{pathFor 'newDeals'}}">New</a>
 					</li>
-					<li class="dropdown">
-						{{> notifications}}
+					<li class="{{activeRouteClass 'bestDeals'}}">
+						<a href="{{pathFor 'bestDeals'}}">Best</a>
 					</li>
-				{{/if}}
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				{{> loginButtons}}
-			</ul>
+					{{#if currentUser}}
+						<li class="{{activeRouteClass 'dealSubmit'}}">
+							<a href="{{pathFor 'dealSubmit'}}">Submit New Deal</a>
+						</li>
+						<li class="dropdown">
+							{{> notifications}}
+						</li>
+					{{/if}}
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					{{> loginButtons}}
+				</ul>
+			</div>
 		</div>
 	</nav>
 </template>
