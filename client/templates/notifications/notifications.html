@@ -1,7 +1,7 @@
 <!-- Notifications & Notification Templates-->
 <template name="notifications">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-		Notifications
+		Notifiche
 		{{#if notificationCount}}
 		<span class="badge badge-inverse">{{notificationCount}}</span>
 		{{/if}}
@@ -13,7 +13,7 @@
 				{{> notification}}
 			{{/each}}
 		{{else}}
-			<li><span>No Notifications</span></li>
+			<li><span>Nessuna Nuova Notifica</span></li>
 		{{/if}}
 	</ul>
 </template>
@@ -21,7 +21,7 @@
 <template name="notification">
 	<li>
 		<a href="{{notificationDealPath}}">
-			<strong>{{commenterName}}</strong> left a comment on your deal
+			<strong>{{commenterName}}</strong> Ha commentato un tuo menù
 		</a>
 	</li>
 </template>

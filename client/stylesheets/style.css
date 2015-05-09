@@ -13,11 +13,11 @@ body {
   padding-top: 70px;
 }
 
-/*body {
-	background: #eee; 
-	color: #666666;
+.deal {
+	background-color: #f4f4f4;
+
 }
-*/
+
 #main {
 	position: relative;
 	margin-top: -20px;
@@ -207,4 +207,17 @@ body {
 /* fixes */
 .controls textarea {
 	width: 500px;
+}
+
+/*.social-icon li a {
+	padding-right: 5px;
+}*/
+
+#social-icon {
+	width: 1.7em;
+}
+
+.deal {
+	position: relative;
+	transition: all 300ms 0ms ease-in;
 }

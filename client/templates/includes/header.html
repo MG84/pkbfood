@@ -13,14 +13,14 @@
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
 					<li class="{{activeRouteClass 'newDeals'}}">
-						<a href="{{pathFor 'newDeals'}}">New</a>
+						<a href="{{pathFor 'newDeals'}}">Nuovi Menù</a>
 					</li>
 					<li class="{{activeRouteClass 'bestDeals'}}">
-						<a href="{{pathFor 'bestDeals'}}">Best</a>
+						<a href="{{pathFor 'bestDeals'}}">Top Menù</a>
 					</li>
 					{{#if currentUser}}
 						<li class="{{activeRouteClass 'dealSubmit'}}">
-							<a href="{{pathFor 'dealSubmit'}}">Submit New Deal</a>
+							<a href="{{pathFor 'dealSubmit'}}">Crea Menù</a>
 						</li>
 						<li class="dropdown">
 							{{> notifications}}
@@ -28,6 +28,10 @@
 					{{/if}}
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+					<li class="social-icon"><a href="https://www.facebook.com/pkbfood" target="_blank"><img id="social-icon" src="/facebook.png"></a></li>
+					<li class="social-icon"><a href="https://instagram.com/pkbfood/" target="_blank"><img id="social-icon" src="/Instagram.png"></a></li>
+					<li class="social-icon"><a href="https://twitter.com/PKBfood" target="_blank"><img id="social-icon" src="/twitter.png"></a></li>
+					<li class="social-icon"><a href="http://potkettleblack.it/" target="_blank"><img id="social-icon" src="/wordpress.png"></a></li>
 					{{> loginButtons}}
 				</ul>
 			</div>

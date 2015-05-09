@@ -9,11 +9,12 @@
 	        	<p><a class="btn btn-lg btn-success" href="{{pathFor 'dealSubmit'}}" role="button">Proponi il tuo menù ora!</a></p>
 			</div>
 			<div class="row">
-				<div class="container">
+				
+				<!-- <div class="container"> -->
 					{{#each deals}}
 						{{> dealItem}}
 					{{/each}}
-				</div>
+				<!-- </div> -->
 			</div>
 			{{#if nextPath}}
 				<a class="load-more" href="{{nextPath}}">Load more</a>
