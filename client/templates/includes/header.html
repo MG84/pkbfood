@@ -11,14 +11,14 @@
 		</div>
 		<div class="collapse navbar-collapse" id="navigation">
 			<ul class="nav navbar-nav">
-				<li>
+				<li class="{{activeRouteClass 'home' 'newDeals'}}">
 					<a href="{{pathFor 'newDeals'}}">New</a>
 				</li>
-				<li>
+				<li class="{{activeRouteClass 'bestDeals'}}">
 					<a href="{{pathFor 'bestDeals'}}">Best</a>
 				</li>
 				{{#if currentUser}}
-					<li>
+					<li class="{{activeRouteClass 'dealSubmit'}}">
 						<a href="{{pathFor 'dealSubmit'}}">Submit New Deal</a>
 					</li>
 					<li class="dropdown">
