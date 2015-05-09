@@ -1,15 +1,20 @@
 <template name="dealItem">
-	<div class="deal">
-		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
-		<div class="deal-content">
-			<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-			<p>
-				{{pluralize votes "Vote"}},
-				submitted by {{author}},
-			<a href="{{pathFor 'dealPage'}}">{{pluralize commentsCount "comment"}}</a>
-			{{#if ownDeal}}<a href="{{pathFor 'dealEdit'}}">Edit</a>{{/if}}
-			</p>
+		<div class="col-lg-4">
+			<div class="deal">
+				<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+				<div class="deal-content">
+					<h3><a href="{{pathFor 'dealPage'}}">{{title}}</a></h3>by {{author}}
+					<p>
+						{{pluralize votes "Vote"}},
+						
+					<a href="{{pathFor 'dealPage'}}">{{pluralize commentsCount "comment"}}</a>
+					{{#if ownDeal}}<a href="{{pathFor 'dealEdit'}}">Edit</a>{{/if}}
+					</p>
+				</div>
+
+
+
+				<a href="{{pathFor 'dealPage'}}" class="discuss btn btn-default">Commenta</a>
+			</div>
 		</div>
-		<a href="{{pathFor 'dealPage'}}" class="discuss btn btn-default">Discuss</a>
-	</div>
 </template>

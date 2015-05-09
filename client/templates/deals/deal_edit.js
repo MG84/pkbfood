@@ -6,7 +6,8 @@ Template.dealEdit.events({
 
 		var dealProperties = {
 			url: $(e.target).find('[name=url]').val(),
-			title: $(e.target).find('[name=title]').val()
+			title: $(e.target).find('[name=title]').val(),
+			message: $(e.target).find('[name=message]').val()
 		}
 
 		Deals.update(currentDealId, {$set: dealProperties}, function(error) {

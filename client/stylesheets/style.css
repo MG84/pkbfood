@@ -24,7 +24,7 @@ body {
 }
 
 .page {
-	position: absolute;
+	/*position: absolute;*/
 	top: 0px;
 	width: 100%;
 }
@@ -204,3 +204,7 @@ body {
 	pointer-events: auto;
 }
 
+/* fixes */
+.controls textarea {
+	width: 500px;
+}

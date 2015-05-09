@@ -18,11 +18,12 @@ Template.dealSubmit.events({
 
 		var deal = {
 			url: $(e.target).find('[name=url]').val(),
-			title: $(e.target).find('[name=title]').val()
+			title: $(e.target).find('[name=title]').val(),
+			message: $(e.target).find('[name=message]').val()
 		}
 
 		var errors = validateDeal(deal);
-		if (errors.title || errors.url)
+		if (errors.title || errors.url || errors.message)
 			return Session.set('dealSubmitErrors', errors)
 
 		Meteor.call('dealInsert', deal, function(error, result){

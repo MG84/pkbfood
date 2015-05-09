@@ -71,7 +71,9 @@ if (Deals.find().count() === 0) {
 			userId: (i%2==0) ? alice._id : bob._id,
 			url: 'http://wwww.potkettleblack.it',
 			submitted: now - i * 3600 * 1000,
-			commentsCount: 0
+			commentsCount: 0, 
+			upvoters: [],
+			votes: 0
 		});
 	}
 }

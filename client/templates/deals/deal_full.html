@@ -1,0 +1,20 @@
+<template name="dealFull">
+	<div class="deal">
+		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆ Vota</a> 
+		<div class="deal-content">
+			<h3><a href="{{pathFor 'dealPage'}}">{{title}}</a></h3>by {{author}}
+			<p>
+				{{pluralize votes "Vote"}},
+			{{#if ownDeal}}
+				<a href="{{pathFor 'dealEdit'}}">Edit</a>{{/if}}
+			</p>
+
+			<br/>
+			<hr>
+			<br/>
+			<p>
+				{{breaklines message}}
+			</p>
+		</div>
+	</div>
+</template>

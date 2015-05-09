@@ -1,11 +1,23 @@
 <template name="dealsList">
-	<div class="deals page">
-		{{#each deals}}
-			{{> dealItem}}
-		{{/each}}
-		
-		{{#if nextPath}}
-			<a class="load-more" href="{{nextPath}}">Load more</a>
-		{{/if}}
+	<div class="container">
+		<div class="deals page">
+			<div class="jumbotron">
+	        	<h1>I nostri menù</h1>
+	        	<p class="lead">
+	        		Scopri le ultime offerte culinarie, tra menù di ristoranti, chef professionisti e amatoriali. Scegli quello che più ti stuzzica il palato!
+	        		</p>
+	        	<p><a class="btn btn-lg btn-success" href="{{pathFor 'dealSubmit'}}" role="button">Proponi il tuo menù ora!</a></p>
+			</div>
+			<div class="row">
+				<div class="container">
+					{{#each deals}}
+						{{> dealItem}}
+					{{/each}}
+				</div>
+			</div>
+			{{#if nextPath}}
+				<a class="load-more" href="{{nextPath}}">Load more</a>
+			{{/if}}
+		</div>
 	</div>
 </template>

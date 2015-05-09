@@ -6,3 +6,8 @@ Template.registerHelper('pluralize', function(n, thing) {
 		return n + ' ' + thing + 's';
 	}
 });
+
+Template.registerHelper('breaklines', function(text) {
+	text = text.replace(/(\r\n|\n|\r)/gm, '<br />');
+	return new Handlebars.SafeString(text);
+});
