@@ -7,10 +7,16 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="{{pathFor 'dealsList'}}">PKBfood</a>
+			<a class="navbar-brand" href="{{pathFor 'home'}}">PKBfood</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navigation">
 			<ul class="nav navbar-nav">
+				<li>
+					<a href="{{pathFor 'newDeals'}}">New</a>
+				</li>
+				<li>
+					<a href="{{pathFor 'bestDeals'}}">Best</a>
+				</li>
 				{{#if currentUser}}
 					<li>
 						<a href="{{pathFor 'dealSubmit'}}">Submit New Deal</a>
