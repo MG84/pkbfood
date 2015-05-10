@@ -24,9 +24,12 @@ Template.dealSubmit.events({
 		e.preventDefault();
 
 		var deal = {
-			url: $(e.target).find('[name=url]').val(),
+			// url: $(e.target).find('[name=url]').val(),
+			city: $(e.target).find('[name=city]').val(),
 			title: $(e.target).find('[name=title]').val(),
-			message: $(e.target).find('[name=message]').val()
+			message: $(e.target).find('[name=message]').val(),
+			people: $(e.target).find('[name=people]').val(),
+			price: $(e.target).find('[name=price]').val(),
 		}
 
 		var errors = validateDeal(deal);
@@ -40,7 +43,7 @@ Template.dealSubmit.events({
 
 			// show this result and abort route away
 			if (result.dealExists)
-				return throwError('This link has already been posted');
+				return throwError('Questo menù è già presente');
 			
 			Router.go('dealPage', {_id: result._id});
 		});

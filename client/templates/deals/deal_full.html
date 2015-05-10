@@ -2,11 +2,14 @@
 	<div class="deal">
 		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆ Vota</a> 
 		<div class="deal-content">
-			<h3><a href="{{pathFor 'dealPage'}}">{{title}}</a></h3>by {{author}}
-			<p>
-				{{pluralize votes "Vote"}},
+			<h3><a href="{{pathFor 'dealPage'}}">{{title}}</a>- {{city}}</h3>by {{author}}
+			<p>coperti: {{people}}<br/>
+			prezzo {{price}}€ <br/>
+			{{pluralize votes "Vote"}},
+			
 			{{#if ownDeal}}
-				<a href="{{pathFor 'dealEdit'}}">Edit</a>{{/if}}
+				<a href="{{pathFor 'dealEdit'}}">Edit</a>
+			{{/if}}
 			</p>
 
 			<br/>

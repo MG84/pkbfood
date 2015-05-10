@@ -5,9 +5,13 @@ Template.dealEdit.events({
 		var currentDealId = this._id
 
 		var dealProperties = {
-			url: $(e.target).find('[name=url]').val(),
+			// url: $(e.target).find('[name=url]').val(),
+			city: $(e.target).find('[name=city]').val(),
 			title: $(e.target).find('[name=title]').val(),
-			message: $(e.target).find('[name=message]').val()
+			message: $(e.target).find('[name=message]').val(),
+			people: $(e.target).find('[name=people]').val(),
+			price: $(e.target).find('[name=price]').val()
+
 		}
 
 		Deals.update(currentDealId, {$set: dealProperties}, function(error) {

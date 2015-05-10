@@ -19,11 +19,14 @@ if (Deals.find().count() === 0) {
 		title: "Spaghetti al nero di seppia",
 		userId: alice._id,
 		author: alice.profile.name,
-		url: 'http://potkettleblack.it/spaghetti-al-nero-di-seppia/',
 		submitted: now - 7 *3600 * 1000,
 		commentsCount: 2,
 		upvoters: [], 
-		votes: 0
+		votes: 0,
+		people: 2,
+		price: 12,
+		city: 'Napoli',
+		message: 'http://potkettleblack.it/spaghetti-al-nero-di-seppia/'
 	});
 
 	Comments.insert({
@@ -46,34 +49,40 @@ if (Deals.find().count() === 0) {
 		title: 'Red velvet cake',
 		userId: bob._id,
 		author: bob.profile.name,
-		url: 'http://potkettleblack.it/red-velvet-cake/',
 		submitted: now - 10 * 3600 * 1000,
 		commentsCount: 0,
 		upvoters: [],
-		votes: 0
+		votes: 0,
+		price: 5,
+		people: 1,
+		city: 'Roma',
+		message: 'http://potkettleblack.it/red-velvet-cake/'
 	});
 
 	Deals.insert({
 		title: 'Crepes ripiene con carciofi al curry',
 		userId: alice._id,
 		author: alice.profile.name,
-		url: 'http://potkettleblack.it/crepes-carciofi-curry/',
 		submitted: now - 10 * 3600 * 1000,
 		commentsCount: 0,
 		upvoters: [],
-		votes: 0
+		votes: 0,
+		message: 'http://potkettleblack.it/crepes-carciofi-curry/',
+		price: 15,
+		people: 2,
+		city: 'Milano'
 	});
 
-	for (var i = 0; i < 10; i++) {
-		Deals.insert({
-			title: 'Test Chef Deal #' + i,
-			author: (i%2==0) ? alice.profile.name : bob.profile.name,
-			userId: (i%2==0) ? alice._id : bob._id,
-			url: 'http://wwww.potkettleblack.it',
-			submitted: now - i * 3600 * 1000,
-			commentsCount: 0, 
-			upvoters: [],
-			votes: 0
-		});
-	}
+	// for (var i = 0; i < 10; i++) {
+	// 	Deals.insert({
+	// 		title: 'Test Chef Deal #' + i,
+	// 		author: (i%2==0) ? alice.profile.name : bob.profile.name,
+	// 		userId: (i%2==0) ? alice._id : bob._id,
+	// 		url: 'http://wwww.potkettleblack.it',
+	// 		submitted: now - i * 3600 * 1000,
+	// 		commentsCount: 0, 
+	// 		upvoters: [],
+	// 		votes: 0
+	// 	});
+	// }
 }

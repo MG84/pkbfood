@@ -221,3 +221,7 @@ body {
 	position: relative;
 	transition: all 300ms 0ms ease-in;
 }
+
+.featurette-heading {
+	margin-top: 12px;
+}
