@@ -1,4 +1,8 @@
-Template.postsList.onRendered(function () {
+Template.dealsList.onRendered(function () {
+    $(document).ready(function(){
+        $(this).scrollTop(0);
+    }),
+
     this.find('.row')._uihooks = {
         insertElement: function (node, next) {
             $(node)

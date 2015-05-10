@@ -1,8 +1,15 @@
+Template.dealSubmit.onRendered(function () {
+    $(document).ready(function(){
+        $(this).scrollTop(0);
+    });
+});
+
 Template.dealSubmit.onCreated(function(){
 	Session.set('dealSubmitErrors', {});
 });
 
 Template.dealSubmit.helpers({
+
 	errorMessage: function(field) {
 		return Session.get('dealSubmitErrors')[field];
 	},
