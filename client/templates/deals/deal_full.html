@@ -4,12 +4,12 @@
 		<div class="deal-content">
 			<h3><a href="{{pathFor 'dealPage'}}">{{title}}</a>- {{city}}</h3>by {{author}}
 			<p>coperti: {{people}}<br/>
-			prezzo {{price}}€ <br/>
-			{{pluralize votes "Vote"}},
+				prezzo: {{price}}€ <br/>
+				{{pluralize votes "Vote"}},
 			
-			{{#if ownDeal}}
-				<a href="{{pathFor 'dealEdit'}}">Edit</a>
-			{{/if}}
+				{{#if ownDeal}}
+					<a href="{{pathFor 'dealEdit'}}">Edit</a>
+				{{/if}}
 			</p>
 
 			<br/>

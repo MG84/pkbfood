@@ -1,0 +1,21 @@
+<template name="requestsList">
+	<div class="container">
+		<div class="requests page">
+			<div clas="jumbotron">
+				<h1>Le richieste di pasti personalizzati </h1>
+				<p class="lead">
+					Scopri le ultime richieste di pasti personalizzati. Sei uno chef? Rispondi alle richieste proponendo un tuo menù.
+				</p>
+				<p><a class="btn btn-lg btn-success" href="{{pathFor 'requestSubmit'}}" role="button">Invia la tua richiesta ora!</a></p>
+			</div>
+			<div class="row">
+				{{#each requests}}
+					{{> requestItem}}
+				{{/each}}
+			</div>
+			{{#if nextPath}}
+				<a class="load-more" href="{{nextPath}}">Load more</a>
+			{{/if}}
+		</div>
+	</div>
+</template>

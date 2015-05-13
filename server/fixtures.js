@@ -30,7 +30,7 @@ if (Deals.find().count() === 0) {
 	});
 
 	Comments.insert({
-		dealId: spaghettiId,
+		objId: spaghettiId,
 		userId: bob._id,
 		author: bob.profile.name,
 		submitted: now - 5 * 3600 * 1000,
@@ -38,7 +38,7 @@ if (Deals.find().count() === 0) {
 	});
 
 	Comments.insert({
-		dealId: spaghettiId,
+		objId: spaghettiId,
 		userId: alice._id,
 		author: alice.profile.name,
 		submitted: now - 3 * 3600 * 1000,

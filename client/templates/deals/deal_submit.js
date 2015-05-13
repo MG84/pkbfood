@@ -33,7 +33,7 @@ Template.dealSubmit.events({
 		}
 
 		var errors = validateDeal(deal);
-		if (errors.title || errors.url || errors.message)
+		if (errors.title || errors.message)
 			return Session.set('dealSubmitErrors', errors)
 
 		Meteor.call('dealInsert', deal, function(error, result){

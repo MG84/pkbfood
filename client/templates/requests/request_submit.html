@@ -1,0 +1,53 @@
+<template name="requestSubmit">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Posta la tua richiesta di pasto personalizzato</h1>
+			<p class="lead">
+				Devi preparare un aperitivo con gli amici, organizzare una festa per i tuoi figli, vuoi organizzare una cena a casa tua e non vuoi passare la giornata dietro i fornelli.
+				Richiedi un pasto personalizzato, gli chef ti risponderanno e potrai scegliere la soluzione che più ti soddisfa.
+			</p>
+		</div>
+		<form class="main form page">
+			
+			<div class="form-group {{errorClass 'city'}}">
+				<label class="control-label" for="location">Città</label>
+				<div class="controls">
+					<input name="city" type="text" value="" placeholder="Dove vuoi mangiare" class="form-control"/>
+					<span class="help-block">{{errorMessage 'city'}}</span>
+				</div>
+			</div>
+			<br/>
+
+			<div class="form-group {{errorClass 'title'}}">
+				<label class="control-label" for="title">Nome richiesta</label>
+				<div class="controls">
+					<input name="title" type="text" value="" placeholder="" class="form-control"/>
+					<span class="help-block">{{errorMessage 'title'}}</span>
+				</div>
+			</div>
+			<br/>
+
+			<div class="form-group {{errorClass 'people'}}">
+				<label class="control-label" for="people">Coperti</label>
+				<div class="controls">
+					<input name="people" type="text" value="" placeholder="Per quante persone?" class="form-control"/>
+					<span class="help-block">{{errorMessage 'people'}}</span>
+				</div>
+			</div>
+			<br/>
+
+
+			<div class="form-group {{errorClass 'message'}}">
+				<label class="control-label" for="message">Descrizione Richiesta</label>
+				<div class="controls">
+					<textarea name="message" type="text" placeholder="Descrivi la tua richiesta" value="" class="form-control"></textarea>
+					 <span class="help-block">{{errorMessage 'message'}}</span>
+				</div>
+			</div>
+			<br/>
+
+			<input type="submit" value="Submit" class="btn btn-primary"/>
+
+		</form>
+	</div>
+</template>

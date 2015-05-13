@@ -1,0 +1,36 @@
+<template name="requestEdit">
+	<div class="container">
+		<form class="main form page">
+
+			<div class="form-group">
+				<label class="control-label" for="city">Città</label>
+				<div class="controls">
+					<input name="city" id="city" type="text" value="{{city}}" placeholder="Città" class="form-control"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="url">Città</label>
+				<div class="controls">
+					<input name="city" id="city" type="text" value="{{city}}" placeholder="Città" class="form-control"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="people">Coperti</label>
+				<div class="controls">
+					<input name="people" id="people" type="text" value="{{people}}" placeholder="Numero di persone" class="form-control"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="message">Descrizione</label>
+				<textarea name="message" id="message" type="text" value="{{message}}" class="form-control"></textarea>
+			</div>
+			<input type="submit" value="Submit" class="btn btn-primary submit"/>
+			<hr/>
+			<a class="btn btn-danger delete" href="#">Delete request</a>
+
+		</form>
+	</div>
+</template>

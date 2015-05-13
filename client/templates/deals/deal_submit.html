@@ -16,53 +16,54 @@
 				</div>
 			</div>
 			<br/> -->
-
-			<div class="control-group">
+			<div class="form-group {{errorClass 'city'}}">
 				<label class="control-label" for="location">Città</label>
 				<div class="controls">
-					<input name="city" type="text" value="" placeholder="Dove ci fai mangiare?"/>
+					<input name="city" type="text" value="" placeholder="Dove ci fai mangiare?" class="form-control"/>
+					<span class="help-block">{{errorMessage 'city'}}</span>
 				</div>
 			</div>
 			<br/>
 
 
-			<div class="control-group">
+			<div class="form-group {{errorClass 'title'}}">
 				<label class="control-label" for="title">Nome menù</label>
 				<div class="controls">
-					<input name="title" type="text" value="" placeholder="Cosa ci fai mangiare?"/>
+					<input name="title" type="text" value="" placeholder="Cosa ci fai mangiare?" class="form-control"/>
+					<span class="help-block">{{errorMessage 'title'}}</span>
 				</div>
 			</div>
 			<br/>
 
-			<div class="control-group">
+			<div class="form-group {{errorClass 'people'}}">
 				<label class="control-label" for="people">Coperti</label>
 				<div class="controls">
-					<input name="people" type="text" value="" placeholder="Per quante persone?"/>
+					<input name="people" type="text" value="" placeholder="Per quante persone?" class="form-control"/>
+					<span class="help-block">{{errorMessage 'people'}}</span>
 				</div>
 			</div>
 			<br/>
 
-			<div class="control-group">
-				<label class="control-label" for="people">Prezzo</label>
+			<div class="form-group {{errorClass 'price'}}">
+				<label class="control-label" for="people">Prezzo €</label>
 				<div class="controls">
-					<input name="price" type="text" value="" placeholder="Quanto costa?"/>€
+					<input name="price" type="text" value="" placeholder="Quanto costa?" class="form-control"/>
+					<span class="help-block">{{errorMessage 'price'}}</span>
 				</div>
 			</div>
 			<br/>
 
-			<div class="control-group">
+			<div class="form-group {{errorClass 'message'}}">
 				<label class="control-label" for="message">Descrizione Offerta</label>
 				<div class="controls">
-					<textarea name="message" type="text" placeholder="Descrivici il tuo menù..." value=""></textarea>
+					<textarea name="message" type="text" placeholder="Descrivici il tuo menù..." value="" class="form-control"></textarea>
+					 <span class="help-block">{{errorMessage 'message'}}</span>
 				</div>
 			</div>
 			<br/>
 
-			<div class="control-group">
-				<div class="controls">
-					<input type="submit" value="Submit" class="btn btn-primary"/>
-				</div>
-			</div>
+			<input type="submit" value="Submit" class="btn btn-primary"/>
+
 
 		</form>
 	</div>

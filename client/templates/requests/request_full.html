@@ -1,0 +1,20 @@
+<template name="requestFull">
+	<div class="request">
+		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆ Vota</a>
+		<div class="request-content">
+			<h3><a href="{{pathFor 'requestPage'}}">{{title}}</a>-{{city}}</h3>by {{author}}
+			<p>coperti: {{people}}<br/>
+				{{pluralize votes "Vote"}},
+				{{#if ownRequest}}
+					<a href="{{pathFor 'requestEdit'}}">Edit</a>
+				{{/if}}
+			</p>
+			<br/>
+			<hr>
+			<br/>
+			<p>
+				{{breaklines message}}
+			</p>
+		</div>
+	</div>
+</template>
