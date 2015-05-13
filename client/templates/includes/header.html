@@ -25,10 +25,10 @@
             			</ul>
             		</li>
 					<li class="dropdown {{activeRouteClass 'newRequests' 'bestRequests' 'requestSubmit'}}">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Richiesta<span class="caret"></span></a>            
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Richieste<span class="caret"></span></a>            
           				<ul class="dropdown-menu" role="menu">
             				<li class="{{activeRouteClass 'newRequests'}}"><a href="{{pathFor 'newRequests'}}">Nuove Richieste</a></li>
-            				<li class="{{activeRouteClass 'bestRequests'}}"><a href="{{pathFor 'bestRequests'}}">Top Richiets</a></li>
+            				<li class="{{activeRouteClass 'bestRequests'}}"><a href="{{pathFor 'bestRequests'}}">Top Richiete</a></li>
             				{{#if currentUser}}
 								<li class="{{activeRouteClass 'requestSubmit'}}">
 									<a href="{{pathFor 'requestSubmit'}}">Crea Richiesta</a>

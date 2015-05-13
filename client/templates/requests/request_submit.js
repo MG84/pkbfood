@@ -21,7 +21,7 @@ Template.requestSubmit.events({
 	'submit form': function(e) {
 		e.preventDefault();
 
-		var deal = {
+		var request = {
 			city: $(e.target).find('[name=city]').val(),
 			title: $(e.target).find('[name=title]').val(),
 			message: $(e.target).find('[name=message]').val(),

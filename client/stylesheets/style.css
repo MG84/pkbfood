@@ -1,4 +1,4 @@
-.grid-block, .main, .deal, .comments li, .comment-form { 
+.grid-block, .main, .deal, .request, .comments li, .comment-form { 
 	background: #fff;
 	border-radius: 3px;
 	padding: 10px;
@@ -13,7 +13,7 @@ body {
   padding-top: 70px;
 }
 
-.deal {
+.request {
 	background-color: #f4f4f4;
 
 }
@@ -47,6 +47,7 @@ body {
 	*zoom: 1;
 	position: relative;
 	opacity: 1;
+	background-color: #f4f4f4;
 }
 
 .deal:before, .deal:after {
@@ -114,6 +115,86 @@ body {
 	margin-top: 7px;
 }
 
+/*
+Requests
+*/
+
+.request {
+	/* For modern browsers */
+	/* For IE 6/7 (trigger hasLayout) */
+	*zoom: 1;
+	position: relative;
+	opacity: 1;
+	background-color: #f4f4f4;
+}
+
+.request:before, .request:after {
+	content: "";
+	display: table; 
+}
+
+.request:after { 
+	clear: both 
+} 
+
+.request.invisible { 
+	opacity: 0 
+} 
+
+.request.instant {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; 
+}
+
+.request.animate{
+    -webkit-transition: all 300ms 0ms;
+    -moz-transition: all 300ms 0ms ease-in;
+    -o-transition: all 300ms 0ms ease-in;
+    transition: all 300ms 0ms ease-in; 
+}
+
+.request .upvote {
+	display: block; 
+	margin: 7px 12px 0 0; 
+	float: left;
+}
+
+.request .request-content { 
+	float: left;
+} 
+
+.request .request-content h3 {
+	margin: 0; 
+	line-height: 1.4; 
+	font-size: 18px;
+}
+
+.request .request-content h3 a { 
+	display: inline-block; 
+	margin-right: 5px;
+}
+
+.request .request-content h3 span {
+	font-weight: normal; 
+	font-size: 14px; 
+	display: inline-block; 
+	color: #aaaaaa;
+}
+
+.request .request-content p { 
+	margin: 0; 
+} 
+
+.request .discuss {
+	display: block; 
+	float: right; 
+	margin-top: 7px;
+}
+
+
+
 .comments {
 	list-style-type: none;
 	margin: 0; 
@@ -165,6 +246,12 @@ body {
 	position: relative;
 	height: 100px;
 }
+
+.request .spinner-container{
+	position: relative;
+	height: 100px;
+}
+
 
 
 @-webkit-keyframes fadeOut {
@@ -218,6 +305,11 @@ body {
 }
 
 .deal {
+	position: relative;
+	transition: all 300ms 0ms ease-in;
+}
+
+.request {
 	position: relative;
 	transition: all 300ms 0ms ease-in;
 }
