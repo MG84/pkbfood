@@ -36,6 +36,14 @@
 							{{/if}}
             			</ul>
             		</li>
+					
+					<li class="dropdown {{activeRouteClass 'newProfiles' 'bestProfiles'}}">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Users<span class="caret"></span></a>            
+          				<ul class="dropdown-menu" role="menu">
+            				<li class="{{activeRouteClass 'newProfiles'}}"><a href="{{pathFor 'newProfiles'}}">Nuovi Profili</a></li>
+            				<li class="{{activeRouteClass 'bestProfiles'}}"><a href="{{pathFor 'bestProfiles'}}">Top Profili</a></li>
+            			</ul>
+            		</li>
 <!-- 						<a href="{{pathFor 'newDeals'}}"></a>
 					</li>
 					<li class="{{activeRouteClass 'bestDeals'}}">
@@ -57,7 +65,7 @@
 					<li class="social-icon"><a href="https://instagram.com/pkbfood/" target="_blank"><img id="social-icon" src="/Instagram.png"></a></li>
 					<li class="social-icon"><a href="https://twitter.com/PKBfood" target="_blank"><img id="social-icon" src="/twitter.png"></a></li>
 					<li class="social-icon"><a href="http://potkettleblack.it/" target="_blank"><img id="social-icon" src="/wordpress.png"></a></li>
-					{{> loginButtons}}
+					{{> loginButtons align="right"}}
 				</ul>
 			</div>
 		</div>

@@ -1,0 +1,20 @@
+<template name="profileFull">
+	<div class="profile">
+		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆ Vota</a>
+		<div class="profile-content">
+			<h3><a href="{{pathFor 'profilePage'}}">{{username}}</a></h3>
+			<p>
+				{{pluralize votes "Vote"}}
+				{{#if owner}}
+					<a href="{{pathFor 'profileEdit'}}">Edit</a>
+				{{/if}}
+			</p>
+			<br/>
+			<hr>
+			<br/>
+			<p>
+				{{breaklines message}}
+			</p>
+		</div>
+	</div>
+</template>

@@ -1,7 +1,7 @@
-Template.requestsList.onRendered(function () {
-    $(document).ready(function(){
-        $(this).scrollTop(0);
-    }),
+Template.profilesList.onRendered(function() {
+	$(document).ready(function(){
+		$(this).scrollTop(0);
+	}),
 
     this.find('.row')._uihooks = {
         insertElement: function (node, next) {

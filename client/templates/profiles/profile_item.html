@@ -1,0 +1,11 @@
+<template name="profileItem">
+	<div class="profile">
+		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+		<div class="profile-content">
+			<h3><a href="{{pathFor 'profilePage'}}">{{username}}</a></h3><br/>
+			<p>
+				{{pluralize votes "Vote"}},
+			</p>
+		</div>
+	</div>
+</template>

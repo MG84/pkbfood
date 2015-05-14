@@ -20,4 +20,14 @@ Meteor.publish('comments', function(objId){
 
 Meteor.publish('notifications', function() {
 	return Notifications.find({userId: this.userId});
-})
+});
+
+Meteor.publish("user", function(id) {
+	debugger;
+	return id && Meteor.users.find({_id: id});
+});
+
+Meteor.publish("users", function(options) {
+	debugger;
+	return Meteor.users.find({}, options);
+});

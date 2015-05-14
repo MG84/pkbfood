@@ -1,4 +1,4 @@
-.grid-block, .main, .deal, .request, .comments li, .comment-form { 
+.grid-block, .main, .deal, .request, .profile, .comments li, .comment-form { 
 	background: #fff;
 	border-radius: 3px;
 	padding: 10px;
@@ -193,6 +193,81 @@ Requests
 	margin-top: 7px;
 }
 
+/* Profiles */
+.profile {
+	/* For modern browsers */
+	/* For IE 6/7 (trigger hasLayout) */
+	*zoom: 1;
+	position: relative;
+	opacity: 1;
+	background-color: #f4f4f4;
+}
+
+.profile:before, .profile:after {
+	content: "";
+	display: table; 
+}
+
+.profile:after { 
+	clear: both 
+} 
+
+.profile.invisible { 
+	opacity: 0 
+} 
+
+.profile.instant {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; 
+}
+
+.profile.animate{
+    -webkit-transition: all 300ms 0ms;
+    -moz-transition: all 300ms 0ms ease-in;
+    -o-transition: all 300ms 0ms ease-in;
+    transition: all 300ms 0ms ease-in; 
+}
+
+.profile .upvote {
+	display: block; 
+	margin: 7px 12px 0 0; 
+	float: left;
+}
+
+.profile .profile-content { 
+	float: left;
+} 
+
+.profile .profile-content h3 {
+	margin: 0; 
+	line-height: 1.4; 
+	font-size: 18px;
+}
+
+.profile .profile-content h3 a { 
+	display: inline-block; 
+	margin-right: 5px;
+}
+
+.profile .profile-content h3 span {
+	font-weight: normal; 
+	font-size: 14px; 
+	display: inline-block; 
+	color: #aaaaaa;
+}
+
+.profile .profile-content p { 
+	margin: 0; 
+} 
+
+.profile .discuss {
+	display: block; 
+	float: right; 
+	margin-top: 7px;
+}
+
 
 
 .comments {
@@ -252,6 +327,10 @@ Requests
 	height: 100px;
 }
 
+.profile .spinner-container{
+	position: relative;
+	height: 100px;
+}
 
 
 @-webkit-keyframes fadeOut {
@@ -310,6 +389,11 @@ Requests
 }
 
 .request {
+	position: relative;
+	transition: all 300ms 0ms ease-in;
+}
+
+.profile {
 	position: relative;
 	transition: all 300ms 0ms ease-in;
 }

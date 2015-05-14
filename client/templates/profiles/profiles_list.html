@@ -1,0 +1,20 @@
+<template name="profilesList">
+	<div class="container">
+		<div class="profiles page">
+			<div class="jumbotron">
+				<h1>I nostri chef</h1>
+				<p class="lead">
+					Scopri i nostri chef. Guarda i loro menù e leggi le loro storie.
+				</p>
+			</div>
+			<div class="row">
+				{{#each objects}}
+					{{> profileItem}}
+				{{/each}}
+			</div>
+			{{#if nextPath}}
+				<a class="load-more" href="{{nextPath}}">Load more</a>
+			{{/if}}
+		</div>
+	</div>
+</template>

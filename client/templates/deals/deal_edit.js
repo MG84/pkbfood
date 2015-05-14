@@ -2,7 +2,7 @@ Template.dealEdit.events({
 	'submit form': function(e) {
 		e.preventDefault();
 
-		var currentDealId = this._id
+		var currentDealId = this._id;
 
 		var dealProperties = {
 			// url: $(e.target).find('[name=url]').val(),

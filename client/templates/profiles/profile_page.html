@@ -1,0 +1,17 @@
+<template name="profilePage">
+	<div class="container">
+		{{> profileFull}}
+
+		<ul class="comments">
+			{{#each comments}}
+				{{> comment}}
+			{{/each}}
+		</ul>
+
+		{{#if currentUser}}
+			{{>commentSubmit}}
+		{{else}}
+			<p>Please log in to leave a comment.</p>
+		{{/if}}
+	</div>
+</template>
