@@ -10,7 +10,12 @@ Template.dealEdit.events({
 			title: $(e.target).find('[name=title]').val(),
 			message: $(e.target).find('[name=message]').val(),
 			people: $(e.target).find('[name=people]').val(),
-			price: $(e.target).find('[name=price]').val()
+			price: $(e.target).find('[name=price]').val(),
+			antipasto: $(e.target).find('[name=antipasto]').val(),
+			primo: $(e.target).find('[name=primo]').val(),
+			secondo: $(e.target).find('[name=secondo]').val(),
+			dolce: $(e.target).find('[name=dolce]').val(),
+			bevande: $(e.target).find('[name=bevande]').val()
 
 		}
 

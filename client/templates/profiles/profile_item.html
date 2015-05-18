@@ -2,7 +2,8 @@
 	<div class="profile">
 		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
 		<div class="profile-content">
-			<h3><a href="{{pathFor 'profilePage'}}">{{username}}</a></h3><br/>
+			<h3><a href="{{pathFor 'profilePage'}}">{{username}}</a></h3><br/>{{pathFor 'profilePage'}}
+			{{_id}}
 			<p>
 				{{pluralize votes "Vote"}},
 			</p>

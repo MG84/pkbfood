@@ -22,12 +22,10 @@ Meteor.publish('notifications', function() {
 	return Notifications.find({userId: this.userId});
 });
 
-Meteor.publish("user", function(id) {
-	debugger;
+Meteor.publish("userData", function(id) {
 	return id && Meteor.users.find({_id: id});
 });
 
 Meteor.publish("users", function(options) {
-	debugger;
 	return Meteor.users.find({}, options);
 });

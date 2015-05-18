@@ -1,19 +1,18 @@
 <template name="dealItem">
-	<div class="deal">
-		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+	<div class="deal col-xs-3 col-centered">
+		<img class="img" src="/vignetta_carbonara_cut.jpg" alt="PKBfood Experience" width="140" height="140">
 		<div class="deal-content">
 			<h3><a href="{{pathFor 'dealPage'}}">{{title}}</a>- {{city}} (chef {{author}})</h3>coperti: {{people}}<br/>prezzo: {{price}}€
-			
 			<p>
 				{{pluralize votes "Vote"}},
 				
 			<a href="{{pathFor 'dealPage'}}">{{pluralize commentsCount "comment"}}</a>
 			{{#if ownDeal}}<a href="{{pathFor 'dealEdit'}}">Edit</a>{{/if}}
 			</p>
+			
+			<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+			<a href="{{pathFor 'dealPage'}}" class="discuss btn btn-default">Commenta</a>
+
 		</div>
-
-
-
-		<a href="{{pathFor 'dealPage'}}" class="discuss btn btn-default">Commenta</a>
 	</div>
 </template>

@@ -8,13 +8,10 @@
 	        		</p>
 	        	<p><a class="btn btn-lg btn-success" href="{{pathFor 'dealSubmit'}}" role="button">Proponi il tuo menù ora!</a></p>
 			</div>
-			<div class="row">
-				
-				<!-- <div class="container"> -->
-					{{#each objects}}
-						{{> dealItem}}
-					{{/each}}
-				<!-- </div> -->
+			<div class="row row-centered">
+				{{#each objects}}
+					{{> dealItem}}
+				{{/each}}
 			</div>
 			{{#if nextPath}}
 				<a class="load-more" href="{{nextPath}}">Load more</a>

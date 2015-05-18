@@ -1,23 +1,60 @@
 <template name="dealFull">
 	<div class="deal">
-		<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆ Vota</a> 
-		<div class="deal-content">
-			<h3><a href="{{pathFor 'dealPage'}}">{{title}}</a>- {{city}}</h3>by {{author}}
-			<p>coperti: {{people}}<br/>
-				prezzo: {{price}}€ <br/>
-				{{pluralize votes "Vote"}},
-			
-				{{#if ownDeal}}
-					<a href="{{pathFor 'dealEdit'}}">Edit</a>
-				{{/if}}
-			</p>
+		<div class="deal-full">
+			<h1><a href="{{pathFor 'dealPage'}}">{{title}}</a> - {{city}}</h1>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<div class='deal-menu'>
+			{{#if antipasto}}
+			<h2>Antipasto</h2>
+				{{antipasto}}
+			<br/>
+			<br/>
+			{{/if}}
 
+			{{#if primo}}
+			<h2>Primo</h2>
+				{{primo}}
+			<br/>
+			<br/>
+			{{/if}}
+			{{#if secondo}}
+			<h2>Secondo</h2>
+				{{secondo}}
+			<br/>
+			<br/>
+			{{/if}}
+			{{#if dolce}}
+			<h2>Dolce</h2>
+				{{dolce}}
+			<br/>
+			<br/>
+			{{/if}}
+			{{#if bevande}}
+			<h2>Bevande</h2>
+				{{bevande}}
+			{{/if}}
 			<br/>
 			<hr>
 			<br/>
-			<p>
+			<p><h2>Storia del Menu</h2>
 				{{breaklines message}}
 			</p>
+			<div class='deal-info'>
+				<strong>by:</strong> {{author}}<br/>
+				<strong>coperti:</strong> {{people}}<br/>
+				<strong>prezzo:</strong> {{price}}€ <br/>
+					{{pluralize votes "Vote"}},
+					{{#if ownDeal}}
+						<a href="{{pathFor 'dealEdit'}}">Edit</a>
+					{{/if}}
+			</div>
+			<a href="#" class="upvote btn btn-default 	{{upvotedClass}}">⬆ Vota</a> 
 		</div>
+
+		
+	
 	</div>
 </template>

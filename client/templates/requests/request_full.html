@@ -5,6 +5,7 @@
 			<h3><a href="{{pathFor 'requestPage'}}">{{title}}</a>-{{city}}</h3>by {{author}}
 			<p>coperti: {{people}}<br/>
 				{{pluralize votes "Vote"}},
+
 				{{#if ownRequest}}
 					<a href="{{pathFor 'requestEdit'}}">Edit</a>
 				{{/if}}

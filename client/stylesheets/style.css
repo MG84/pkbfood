@@ -87,6 +87,38 @@ body {
 	float: left;
 } 
 
+.deal .deal-full {
+	float: center;
+	text-align: center;
+}
+.deal .deal-full h1, p{
+	float: middle;
+	text-align: center;
+}
+
+
+
+.deal .deal-info {
+	float: right;
+	margin-right: 20px;
+	border: solid;
+	background-color: white;
+	padding: 20px;
+}
+
+.deal .deal-menu {
+	text-align: center;
+}
+@font-face {
+    font-family: classic;
+    src: url(ballantines-serial-regular.ttf);
+}
+
+
+.deal .deal-menu h2 {
+	font-family: classic;
+}
+
 .deal .deal-content h3 {
 	margin: 0; 
 	line-height: 1.4; 
@@ -400,4 +432,39 @@ Requests
 
 .featurette-heading {
 	margin-top: 12px;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:45px;
+}
+
+.col-fixed {
+    /* custom width */
+    width:320px;
+}
+.col-min {
+    /* custom min width */
+    min-width:320px;
+}
+.col-max {
+    /* custom max width */
+    max-width:320px;
+}
+
+.form-control{
+	width: 35%;
+  	height: 60px;
+}
+
+textarea {
+	width: 50%;
 }

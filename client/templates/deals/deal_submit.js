@@ -30,8 +30,12 @@ Template.dealSubmit.events({
 			message: $(e.target).find('[name=message]').val(),
 			people: $(e.target).find('[name=people]').val(),
 			price: $(e.target).find('[name=price]').val(),
+			antipasto: $(e.target).find('[name=antipasto]').val(),
+			primo: $(e.target).find('[name=primo]').val(),
+			secondo: $(e.target).find('[name=secondo]').val(),
+			dolce: $(e.target).find('[name=dolce]').val(),
+			bevande: $(e.target).find('[name=bevande]').val()
 		}
-
 		var errors = validateDeal(deal);
 		if (errors.title || errors.message)
 			return Session.set('dealSubmitErrors', errors)
@@ -47,5 +51,5 @@ Template.dealSubmit.events({
 			
 			Router.go('dealPage', {_id: result._id});
 		});
-	}
+	},
 });
